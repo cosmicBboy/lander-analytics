@@ -1,0 +1,33 @@
+<template name="trainingCourses">
+  <div class="training-container container">
+    <div class="content">
+      <div class="content-copy">
+        <h1>PROFESSIONAL TRAINING COURSES</h1>
+        <p>From theoretical statistics and machine learning to applied programming skills, our most popular courses can be modified to fit your organization’s needs.</p>
+      </div>
+
+      <div class="services row">
+        <div class="panel-group" id="accordion">
+        {{#each trainingContent}}
+
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                <span><i class="fa {{icon}}"></i></span>
+                <a data-toggle="collapse" data-parent="#accordion" href="#{{panelId}}"><h3>{{title}}</h3></a>
+                <!-- <a href="#" class="btn btn-info" role="button"><i class="fa fa-info-circle"></i>More Info</a> -->
+              </div>
+
+              <div id="{{panelId}}" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>DURATION: {{description}}</p>
+                  <p>HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages. <a href="http://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                </div>
+              </div>
+          </div>
+
+        {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

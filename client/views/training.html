@@ -1,7 +1,29 @@
 <template name="training">
   <div class="training-container container">
     <div class="content">
-      Training Content
+      <div class="content-copy">
+        <h1>PROFESSIONAL TRAINING COURSES</h1>
+        <p>From theoretical statistics and machine learning to applied programming skills, our most popular courses can be modified to fit your organization’s needs.</p>
+      </div>
+
+      <div class="services row home-services">
+        <div class="panel-group" id="accordion">
+        {{#each trainingContent}}
+
+          <div class="col-sm-6 col-md-2">
+            
+            <div class="thumbnail">
+              <span><i class="fa {{icon}}"></i></span>
+              <div class="caption">
+                <h4>{{title}}</h4>
+                <!-- <p><a href="#" class="btn btn-info" role="button"><i class="fa fa-info-circle"></i>More Info</a></p> -->
+              </div>
+            </div>
+
+          </div>
+        {{/each}}
+        </div>
+      </div>
     </div>
   </div>
 </template>
