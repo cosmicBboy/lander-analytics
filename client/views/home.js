@@ -24,8 +24,18 @@ var scrollTo = function(element, offset, targetClass) {
   scrollAnimate(y, target);
 };
 
+Template.home.onCreated(function() {
+
+})
+
 Template.home.events({
   'click #training-scroll' : function (e,t) {
     scrollTo('.training-container');
+  },
+  'click #consulting-scroll' : function (e,t) {
+    scrollTo('.consulting-container');
+  },
+  'click .back-to-top' : function (e,t) {
+    scrollTo('.home-container');
   },
 });

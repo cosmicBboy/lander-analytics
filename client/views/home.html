@@ -4,11 +4,19 @@
 
     <div class="content">
       <div class="main-logo-container">
-        Main Logo
+        <img class="img-responsive" src="/landeranalytics_banner.png" alt="Lander Analytics">
       </div>
+      <h1>Navigating Data Science</h1>
     </div>
     
-    <a id="training-scroll" href="#">Training</a>
+    <div class='services-scroll-container'>
+      <div class="btn-group" role="group" aria-label="...">
+        <a type="button" id="training-scroll" class="btn btn-lg btn-primary btn-custom">TRAINING</a>
+        <a type="button" id="consulting-scroll" class="btn btn-lg btn-primary btn-custom">CONSULTING</a>
+      </div>
+      <a><i class="fa fa-chevron-circle-up back-to-top"></i></a>
+    </div>
   </div>
   {{> training}}
+  {{> consulting}}
 </template>
