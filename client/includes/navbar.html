@@ -1,0 +1,10 @@
+<template name="navbar">
+  <div class="navbar-container">
+    <a href="{{pathFor route='home'}}">Home</a>
+    <a href="{{pathFor route='about'}}">About</a>
+    <a href="{{pathFor route='leadership'}}">Leadership</a>
+    <a href="{{pathFor route='dataTalent'}}">Data Talent</a>
+    <a id='contact' href="{{pathFor route=currentRoute hash='contact'}}">Contact</a>
+    <a id='search' href="{{pathFor route=currentRoute hash='search'}}">Search</a>
+  </div>
+</template>

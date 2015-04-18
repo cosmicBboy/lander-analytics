@@ -10,3 +10,7 @@ alanning:roles
 iron:router
 sanjo:jasmine
 velocity:html-reporter
+jquery
+jquery-waypoints
+mizzao:jquery-ui
+email

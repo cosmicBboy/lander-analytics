@@ -1,0 +1,36 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.main-logo-container {
+  width: 500px;
+  height: 250px;
+  background-color: #ddd;
+}
+
+.content {
+  padding-top: 70px;
+}
+
+.overlay {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(250,250,250,0.7);
+  top: 25%;
+  left: 25%;
+}
+
+.navbar-container {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+}
