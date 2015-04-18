@@ -5,12 +5,21 @@
 # but you can also edit it by hand.
 
 meteor-platform
+accounts-base
 accounts-password
+dburles:collection-helpers
+aldeed:collection2
+aldeed:simple-schema
 alanning:roles
 iron:router
-sanjo:jasmine
-velocity:html-reporter
+#sanjo:jasmine
+#velocity:html-reporter
 jquery
 jquery-waypoints
 mizzao:jquery-ui
 email
+twbs:bootstrap
+fortawesome:fontawesome
+yogiben:admin
+ian:accounts-ui-bootstrap-3
+gfk:notifications
