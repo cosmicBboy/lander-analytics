@@ -1,3 +1,7 @@
+Meteor.startup(function() {
+  $('#login-dropdown-list').addClass('open');
+});
+
 Template.registerHelper('showSearch', function() {
   var controller = Iron.controller();
   var params = controller.getParams();
