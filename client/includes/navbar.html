@@ -1,10 +1,36 @@
 <template name="navbar">
+
   <div class="navbar-container">
-    <a href="{{pathFor route='home'}}">Home</a>
-    <a href="{{pathFor route='about'}}">About</a>
-    <a href="{{pathFor route='leadership'}}">Leadership</a>
-    <a href="{{pathFor route='dataTalent'}}">Data Talent</a>
-    <a id='contact' href="{{pathFor route=currentRoute hash='contact'}}">Contact</a>
-    <a id='search' href="{{pathFor route=currentRoute hash='search'}}">Search</a>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a class="navbar-brand" href="#">Brand</a> -->
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a class="btn btn-primary btn-custom home-btn" href="{{pathFor route='home'}}">HOME</a></li>
+            <li><a class="btn btn-primary btn-custom about-btn" href="{{pathFor route='about'}}">ABOUT</a></li>
+            <li><a class="btn btn-primary btn-custom leadership-btn" href="{{pathFor route='leadership'}}">LEADERSHIP</a></li>
+            <li><a class="btn btn-primary btn-custom data-talent-btn" href="{{pathFor route='dataTalent'}}">DATA TALENT</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="btn btn-primary btn-custom contact-btn" href="{{pathFor route=currentRoute hash='contact'}}"><i class="fa fa-envelope-o"></i>CONTACT US</a></li>
+            <li><a class="btn btn-primary btn-custom search-btn" href="{{pathFor route=currentRoute hash='search'}}"><i class="fa fa-search"></i></a></li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
   </div>
+
 </template>
