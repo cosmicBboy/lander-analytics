@@ -24,16 +24,27 @@ var scrollTo = function(element, offset, targetClass) {
   scrollAnimate(y, target);
 };
 
-Template.home.onCreated(function() {
-
+Template.home.onRendered(function() {
+  Session.set('showTraining', true);
 })
+
+Template.home.onCreated(function() {
+})
+
+Template.home.helpers({
+  showTraining: function() {
+    return Session.get('showTraining');
+  },
+});
 
 Template.home.events({
   'click #training-scroll' : function (e,t) {
-    scrollTo('.training-container');
+    Session.set('showTraining', true);
+    scrollTo('.services-container');
   },
   'click #consulting-scroll' : function (e,t) {
-    scrollTo('.consulting-container');
+    Session.set('showTraining', false);
+    scrollTo('.services-container');
   },
   'click .back-to-top' : function (e,t) {
     scrollTo('.home-container');
