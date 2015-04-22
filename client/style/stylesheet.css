@@ -1,18 +1,32 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans');
 @import url('http://fonts.googleapis.com/css?family=Montserrat');
+@import url('http://fonts.googleapis.com/css?family=Raleway');
 
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
-  font-family: 'Open Sans';
+  font-family: 'Raleway';
   text-align: center;
 }
 
-h1, h2, h3, h4 {
-  color: #64B0C7;
+h1, h2, h3 {
+  color: #115582;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+h4 {
+  color: #115582;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.admin-layout .nav > li > a {
+  display: inline;
 }
 
 .home-container h1 {
@@ -42,7 +56,7 @@ h1, h2, h3, h4 {
 }
 
 .content {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .content-copy {
@@ -51,7 +65,7 @@ h1, h2, h3, h4 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .overlay {
@@ -67,6 +81,16 @@ h1, h2, h3, h4 {
   position: fixed;
   z-index: 10;
   width: 100%;
+  background-color: rgba(255,255,255,1);
+
+  -webkit-box-shadow: 0px 8px 22px -2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 8px 22px -2px rgba(0,0,0,0.1);
+  box-shadow: 0px 8px 22px -2px rgba(0,0,0,0.1);
+}
+
+.navbar-brand img {
+  /*margin-top: 10px;*/
+  width: 200px;
 }
 
 nav.navbar.navbar-default {
@@ -81,7 +105,12 @@ nav.navbar.navbar-default {
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,1);
+  border-top: transparent;
+}
+
+.navbar-default .navbar-form {
+  margin-top: 30px;
 }
 
 .navbar-default .navbar-toggle {
@@ -110,7 +139,7 @@ a.btn.btn-primary.btn-custom .fa-search {
   background-color: #fff;
   border-radius: 5px;
   border-color: transparent;
-  color: #64B0C7;
+  color: #115582;
   font-size: 16px;
   font-family: 'Montserrat';
   margin-right: 5px;
@@ -120,8 +149,16 @@ a.btn.btn-primary.btn-custom .fa-search {
 
 .btn.btn-primary.btn-custom:hover,
 .btn.btn-primary.btn-custom:focus {
-  background-color: #7bbed1;
+  background-color: #115582;
   color: #fff;
+}
+
+.content p {
+  text-align: justify;
+}
+
+.content p.center-para {
+  text-align: center;
 }
 
 .services-scroll-container {
@@ -165,9 +202,18 @@ div.train-btn {
 
 .btn.btn-primary.btn-custom#training-scroll,
 .btn.btn-primary.btn-custom#consulting-scroll {
-  border-color: #addfed;
+  color: #115582;
+  border-color: #115582;
   margin-left: 0;
   margin-right: 0;
+}
+
+.btn.btn-primary.btn-custom#training-scroll:hover,
+.btn.btn-primary.btn-custom#training-scroll:focus,
+.btn.btn-primary.btn-custom#consulting-scroll:hover,
+.btn.btn-primary.btn-custom#consulting-scroll:focus {
+  color: #fff;
+  background-color: #115582;
 }
 
 .services.row {
@@ -191,11 +237,17 @@ div.train-btn {
 .services .thumbnail {
   background-color: #F6F6F6;
   border-color: transparent;
-  height: 240px;
+  height: 150px;
 }
 
 .services .thumbnail .caption {
   display: block;
+  padding: 0;
+}
+
+.services .thumbnail .caption  h4{
+  margin: 0;
+  font-size: 16px;
 }
 
 .services.home-services.row {
@@ -206,7 +258,7 @@ div.train-btn {
 .services .panel h3 {
   font-size: 18px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .services .col-md-2 {
@@ -236,11 +288,28 @@ div.train-btn {
 }
 
 .services .panel-heading {
-  padding: 5px 15px;
-  /*float: left;
-  padding-left: 20px;*/
+  padding: 5px 0px;
+}
+
+.services .panel-heading img {
+  padding: 0px 10px;
+  float: left;
+  /*padding-left: 20px;*/
+  height: 45px;
 }
 
 .services .panel-body {
   background-color: #fff;
+}
+
+.content-copy ul {
+  background-color: #EEE;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  width: 275px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 }
