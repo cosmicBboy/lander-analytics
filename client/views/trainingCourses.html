@@ -12,8 +12,9 @@
 
           <div class="panel panel-default">
               <div class="panel-heading">
-                <span><i class="fa {{icon}}"></i></span>
-                <a data-toggle="collapse" data-parent="#accordion" href="#{{panelId}}"><h3>{{title}}</h3></a>
+                <!-- <span><i class="fa {{icon}}"></i></span> -->
+                <img src="{{icon}}" alt="{{title}}">
+                <a data-toggle="collapse" data-parent="#accordion" href="{{pathFor route=currentRoute hash=panelId}}"><h3>{{title}}</h3></a>
                 <!-- <a href="#" class="btn btn-info" role="button"><i class="fa fa-info-circle"></i>More Info</a> -->
               </div>
 

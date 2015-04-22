@@ -1,43 +1,43 @@
 tempTrainingContent = [
   {
-    'icon': 'fa-area-chart',
+    'icon': '/icons/traditionalstats.png',
     'title': 'TRADITIONAL STATISTICS',
     'description': 'One-day theoretical course',
     'panelId': 'traditional-stats',
   },
   {
-    'icon': 'fa-area-chart',
+    'icon': '/icons/introR.png',
     'title': 'INTRO TO R',
     'description': 'One-day programming course teaching how to perform' +
       'material learned in the Traditional Statistics Course',
     'panelId': 'intro-to-r',
   },
   {
-    'icon': 'fa-area-chart',
+    'icon': '/icons/modeling.png',
     'title': 'MODELING & ANALYTICS IN R',
     'description': 'One-day course with advanced topics in R',
     'panelId': 'modeling-analytics-r',
   },
   {
-    'icon': 'fa-area-chart',
-    'title': 'DATA PRESENTATION AND PORTABILITY',
+    'icon': '/icons/datapresentation.png',
+    'title': 'DATA PRESENTATION & PORTABILITY',
     'description': 'One-day course about communicating code in R',
     'panelId': 'intro-to-python',
   },
   {
-    'icon': 'fa-area-chart',
+    'icon': '/icons/intropython.png',
     'title': 'INTRO TO PYTHON',
     'description': 'One-day course on the basics of computing and data in Python',
     'panelId': 'intro-to-python',
   },
   {
-    'icon': 'fa-area-chart',
+    'icon': '/icons/machinelearning.png',
     'title': 'MACHINE LEARNING',
     'description': 'One-day course combining theory and programming',
     'panelId': 'machine-learning',
   },
   {
-    'icon': 'fa-area-chart',
+    'icon': '/icons/highperfcomputing.png',
     'title': 'HIGH PERFORMANCE COMPUTING IN R',
     'description': 'One-day course focused on speed improvements in R',
     'panelId': 'high-perf-comp-r',
@@ -47,5 +47,9 @@ tempTrainingContent = [
 Template.training.helpers({
   trainingContent: function() {
     return tempTrainingContent
-  }
+  },
+  panelId: function() {
+    //data context is a trainingCourse object
+    return this.panelId;
+  },
 });
