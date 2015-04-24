@@ -26,13 +26,13 @@ var contactHooksObject = {
     }
 
     var to = 'niels.bantilan@gmail.com';
-    var from = 'hello@sumit.io';
-    var header = '[Lander Analytics Contact]';
+    var from = 'niels.bantilan@gmail.com';
+    var header = '[Lander Analytics Message] ';
     subject = header + subject;
 
     var text = name + ' has contacted you ' +
       'for your ' + reason + ' services.\n\n' +
-      'This is their message:\n' + message + '\n\n' +
+      'This is their message:\n\n' + message + '\n\n' +
       'You can reach them through:\n' +
       'Email: ' + email + '\n' +
       'Phone: ' + phone + '\n'

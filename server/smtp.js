@@ -1,9 +1,9 @@
 // server/smtp.js
 Meteor.startup(function () {
   smtp = {
-    username: 'hello@sumit.io',   // eg: server@gentlenode.com
-    password: 'opendevelopment',   // eg: 3eeP1gtizk5eziohfervU
-    server:   'mail.privateemail.com',  // eg: smtp.google.com
+    username: 'info@landeranalytics.com',   // eg: server@gentlenode.com
+    password: 'password-needed',   // eg: 3eeP1gtizk5eziohfervU
+    server:   'smtp.gmail.com',  // eg: smtp.google.com
     port: 465
   }
 
