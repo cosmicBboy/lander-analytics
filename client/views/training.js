@@ -22,7 +22,7 @@ tempTrainingContent = [
     'icon': '/icons/datapresentation.png',
     'title': 'DATA PRESENTATION & PORTABILITY',
     'description': 'One-day course about communicating code in R',
-    'panelId': 'intro-to-python',
+    'panelId': 'data-pres',
   },
   {
     'icon': '/icons/intropython.png',
@@ -46,7 +46,9 @@ tempTrainingContent = [
 
 Template.training.helpers({
   trainingContent: function() {
-    return tempTrainingContent
+    console.log(Template.parentData(1));
+    var data = Template.parentData(1);
+    return data.content;
   },
   panelId: function() {
     //data context is a trainingCourse object

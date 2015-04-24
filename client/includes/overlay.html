@@ -1,13 +1,12 @@
 <template name='overlay'>
-  {{#if showSearch}}
-  <div class="overlay">
-    Search Overlay Here
-  </div>
-  {{/if}}
-
-  {{#if showContact}}
-  <div class="overlay">
-    Contact Overlay Here
-  </div>
+  {{#if showTemplate}}
+    <div class='overlay'>
+      <div class='modal'>
+        <a id="close-overlay"><i class="fa fa-times"></i></a>
+        <div class='modal-copy'>
+          {{> Template.dynamic template=showTemplate}}
+        </div>
+      </div>
+    </div>
   {{/if}}
 </template>

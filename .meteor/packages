@@ -10,6 +10,8 @@ accounts-password
 dburles:collection-helpers
 aldeed:collection2
 aldeed:simple-schema
+matteodem:easy-search
+aldeed:autoform
 alanning:roles
 iron:router
 #sanjo:jasmine
@@ -20,6 +22,6 @@ mizzao:jquery-ui
 email
 twbs:bootstrap
 fortawesome:fontawesome
-yogiben:admin
+yogiben:admin@=1.0.9
 ian:accounts-ui-bootstrap-3
 gfk:notifications

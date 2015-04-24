@@ -3,20 +3,23 @@
   <div class="home-container container">
 
     <div class="content">
-      <h1>Navigating Data Science</h1>
-      <div class="btn-group" role="group" aria-label="...">
-        <a type="button" id="training-scroll" class="btn btn-lg btn-primary btn-custom">TRAINING</a>
-        <a type="button" id="consulting-scroll" class="btn btn-lg btn-primary btn-custom">CONSULTING</a>
-      </div>
-      {{#if showTraining}}
-        {{> training}}
-      {{else}}
-        {{> consulting}}
-      {{/if}}
+      <img class='header-gif' src="/headerGIF.gif">
     </div>
     
     <!-- <div class='services-scroll-container'> -->
       <!-- <a><i class="fa fa-chevron-circle-up back-to-top"></i></a> -->
     <!-- </div> -->
+  </div>
+
+  <div class='services-container'>
+    <div class="btn-group" role="group" aria-label="...">
+      <button type="button" id="training-scroll" class="btn btn-lg btn-primary btn-custom">TRAINING</button>
+      <button type="button" id="consulting-scroll" class="btn btn-lg btn-primary btn-custom">CONSULTING</button>
+   </div>
+    {{#if showTraining}}
+      {{> training}}
+    {{else}}
+      {{> consulting}}
+    {{/if}}
   </div>
 </template>

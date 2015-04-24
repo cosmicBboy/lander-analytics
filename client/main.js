@@ -1,5 +1,7 @@
 Meteor.startup(function() {
   $('#login-dropdown-list').addClass('open');
+  Session.set('overlayTemplate', null);
+  $('body').removeClass('noscroll');
 });
 
 Template.registerHelper('showSearch', function() {
@@ -20,6 +22,6 @@ Template.registerHelper('showContact', function() {
 
 Template.registerHelper('currentRoute', function() {
   var currentRoute = Router.current().route.getName();
-  console.log(Router.current());
+  console.log(currentRoute);
   return currentRoute;
 });

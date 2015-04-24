@@ -1,7 +1,7 @@
 var scrollAnimate = function (offset, target) {
   $(target).animate(
     { scrollTop: offset },
-    { duration: 1000, easing: 'swing' }
+    { duration: 500, easing: 'swing' }
   );
 }
 
@@ -40,11 +40,11 @@ Template.home.helpers({
 Template.home.events({
   'click #training-scroll' : function (e,t) {
     Session.set('showTraining', true);
-    scrollTo('.services-container');
+    scrollTo('.services-container', -100);
   },
   'click #consulting-scroll' : function (e,t) {
     Session.set('showTraining', false);
-    scrollTo('.services-container');
+    scrollTo('.services-container', -100);
   },
   'click .back-to-top' : function (e,t) {
     scrollTo('.home-container');

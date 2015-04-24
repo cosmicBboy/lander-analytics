@@ -2,7 +2,14 @@
   {{> overlay}}
   <div class="contact-container container">
     <div class="content">
-      CONTACT FORM
+      <div class="content-copy">
+        <h2>CONTACT FORM</h2>
+      </div>
+      {{> insertContactForm}}
     </div>
   </div>
+</template>
+
+<template name="insertContactForm">
+  {{> quickForm collection="Contacts" id="insertContactForm"}}
 </template>
