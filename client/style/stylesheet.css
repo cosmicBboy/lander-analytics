@@ -22,6 +22,7 @@ h1, h2, h3 {
 
 h2, h3, h4 {
   color: #111;
+  font-weight: bold;
 }
 
 a:hover,
@@ -62,6 +63,7 @@ img.header-gif {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  margin-top: -25px;
   /*height: 100%;*/
 }
 
@@ -90,22 +92,12 @@ img.header-gif {
 }
 
 .modal {
-/*  width: 70%;
-  height: 60%;
-  top: 20%;
-  left: 15%;
-  bottom: 10%;
-  background-color: #fff;
-  display: block;
-  padding: 40px;
-  text-align: justify;*/
+  border-radius: 4px;
   margin-top: 11%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  /* top: 20%; */
-  /* left: 15%; */
   bottom: 10%;
   background-color: #fff;
   display: block;
@@ -125,76 +117,6 @@ img.header-gif {
   position: absolute;
   top: 5px;
   right: 10px;
-}
-
-.navbar-container {
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-  height: 100px;
-  /*background-color: rgba(255,255,255,1);*/
-  background-image: url('/bannerbg.jpg');
-  background-size: cover;
-
-  -webkit-box-shadow: 0px 8px 22px -2px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 8px 22px -2px rgba(0,0,0,0.1);
-  box-shadow: 0px 8px 22px -2px rgba(0,0,0,0.1);
-}
-
-.navbar-brand {
-  margin-top: 2px;
-}
-
-.navbar-brand img {
-  /*margin-top: 10px;*/
-  width: 200px;
-}
-
-nav.navbar.navbar-default {
-  /*background-color: rgba(255,255,255,0.9);*/
-  background-color: transparent;
-  border-color: transparent;
-  height: 70px;
-}
-
-.nav.navbar-nav {
-  padding-top: 15px;
-  padding-bottom: 10px;
-}
-
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  /*background-color: rgba(255,255,255,1);*/
-  background-color: transparent;
-  border-top: transparent;
-}
-
-.navbar-default .navbar-collapse.in,
-.navbar-default .navbar-form.in {
-  background-color: rgba(255,255,255,1);
-  margin-top: 40px;
-  border-top: transparent;
-
-  -webkit-box-shadow: 0px 8px 22px -2px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 8px 22px -2px rgba(0,0,0,0.1);
-  box-shadow: 0px 8px 22px -2px rgba(0,0,0,0.1);
-}
-
-.navbar-default .navbar-form {
-  margin-top: 30px;
-}
-
-.navbar-default .navbar-toggle {
-  border-color: #addfed;
-}
-
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: #addfed;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #64B0C7;
 }
 
 a.btn.btn-primary.btn-custom .fa-search {
@@ -237,7 +159,6 @@ a.btn.btn-primary.btn-custom .fa-search {
 
 .services-container {
   background-color: #eee;
-  margin-top: 50px;
 }
 
 .services-container .btn-group {
@@ -400,6 +321,10 @@ div.train-btn {
   background-color: #fff;
 }
 
+.content-copy > p {
+  text-align: center;
+}
+
 .content-copy ul {
   background-color: #fff;
   border-radius: 5px;
@@ -470,5 +395,18 @@ body.noscroll
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
+}
+
+.books-container .books img {
+  height: 250px;
+}
+
+.books h4 {
+  font-family: 'Montserrat';
+}
+
+.books h4,
+.books p {
   text-align: left;
 }
