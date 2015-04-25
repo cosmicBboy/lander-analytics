@@ -25,8 +25,8 @@ var contactHooksObject = {
       reason = 'Custom';
     }
 
-    var to = 'niels.bantilan@gmail.com';
-    var from = 'niels.bantilan@gmail.com';
+    var to = 'info@landeranalytics.com';
+    var from = 'info@landeranalytics.com';
     var header = '[Lander Analytics Message] ';
     subject = header + subject;
 
