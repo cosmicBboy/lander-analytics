@@ -22,6 +22,8 @@ mizzao:jquery-ui
 email
 twbs:bootstrap
 fortawesome:fontawesome
-yogiben:admin@=1.0.9
-ian:accounts-ui-bootstrap-3
+yogiben:admin@=1.1.1
+yogiben:autoform-file
 gfk:notifications
+cfs:standard-packages
+cfs:gridfs

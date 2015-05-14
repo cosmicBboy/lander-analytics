@@ -30,6 +30,10 @@ a:focus {
   text-decoration: none;
 }
 
+a img {
+  cursor: pointer;
+}
+
 .admin-layout .nav > li > a {
   display: inline;
 }
@@ -81,17 +85,17 @@ img.header-gif {
   padding-bottom: 10px;
 }
 
-.overlay {
+.my-overlay {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(1,1,1,0.5);
-  /*top: 25%;*/
-  /*left: 25%;*/
+  background-color: rgba(1,1,1,0.25);
+  top: 0%;
+  left: 0%;
   z-index: 100;
 }
 
-.modal {
+.my-overlay .modal {
   border-radius: 4px;
   margin-top: 11%;
   position: relative;
@@ -105,12 +109,12 @@ img.header-gif {
   text-align: justify;
 }
 
-.modal-copy {
+.my-overlay .modal-copy {
   overflow-y: scroll;
   height: 100%;
 }
 
-.overlay #close-overlay {
+.my-overlay #close-overlay {
   color: #333;
   cursor: pointer;
   font-size: 20px;
