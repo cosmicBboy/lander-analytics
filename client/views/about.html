@@ -1,19 +1,35 @@
 <template name="about">
-  {{#if showOverlay}}
-    {{> overlay}}
-  {{/if}}
   <div class="about-container container">
     <div class="content">
       <div class="content-copy">
-        <h2>ABOUT LANDER ANALYTICS</h2>
-        <p>Lander Analytics is a New York based consulting firm specializing in statistical and data analytic work.  Clients range from large corporations to nascent startups, from political campaigns to disaster relief efforts on multiple continents.</p>
-        <p>Led by owner Jared Lander, projects are completed by a team of statisticians and data scientists most of whom hold Master’s or Ph.D.’s.
-        </p>
-        <p>Please see a partial list of Consulting and Training services or Contact us to discuss your project.</p>
+        <h2>{{title}}</h2>
+        {{#each description}}
+          <p>{{this}}</p>
+        {{/each}}
       </div>
       <br>
 
       <div class="row personnel">
+
+        {{#each leaders}}
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a><img class="img-circle" src="{{getPicture pictureId=picture}}" alt="..."></a>
+            <div class="caption">
+              <h3>{{name}}</h3>
+              <p>{{positionTitle}}</p>
+            </div>
+          </div>
+        </div>
+
+        {{#if showOverlay}}
+          {{> overlay}}
+        {{/if}}
+
+        {{/each}}
+
+      </div>
+      <!-- <div class="row personnel">
         <div class="col-md-4">
           <div class="thumbnail">
             <a id="leader-jared"><img class="img-circle" src="/headshots/jared_250.png" alt="..."></a>
@@ -41,7 +57,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>
@@ -60,4 +76,11 @@
 <template name="ericBio">
   <h3>Eric Schechterman, Chief Development Officer</h3>
   <p>Eric Schechterman is responsible for sales, strategic marketing plans both long and short term as well as product development. He has been a featured speaker at numerous business conferences, where he has helped to educate companies on successful business strategies and data collection. Schechterman has written several articles and is sought out for his knowledge on a variety of business subjects. Prior to his role at Lander Analytics, Eric spent 9 years leading sales for Fortune 500 companies driving growth and market expansion. A strong team leader, relationship builder, new business developer, contract negotiator and sales strategist. Eric’s experience with various business subjects enables him to service his clients with a total solution. He believes that his job is not only to help individuals find the right information for their business, but also to assist them with how to use that information during critical times. He is Six Sigma Green Belt Certified. Schechterman is a graduate from Rutgers University.</p>
+</template>
+
+<template name="leaderBio">
+  <h3>{{name}}, {{title}}</h3>
+  {{#each bio}}
+    <p>{{this}}</p>
+  {{/each}}
 </template>
