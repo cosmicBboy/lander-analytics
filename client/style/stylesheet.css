@@ -91,7 +91,7 @@ img.header-gif {
   z-index: 100;
 }
 
-.modal {
+/*.modal {
   border-radius: 4px;
   margin-top: 11%;
   position: relative;
@@ -103,12 +103,12 @@ img.header-gif {
   display: block;
   padding: 40px;
   text-align: justify;
-}
+}*/
 
-.modal-copy {
+/*.modal-copy {
   overflow-y: scroll;
   height: 100%;
-}
+}*/
 
 .overlay #close-overlay {
   color: #333;
