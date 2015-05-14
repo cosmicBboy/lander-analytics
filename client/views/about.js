@@ -1,3 +1,8 @@
+Template.onRendered(function() {
+  // var data = About.find({}).fetch();
+  // console.log(data);
+});
+
 Template.about.helpers({
   showOverlay : function() {
     return Session.get('overlayTemplate');
