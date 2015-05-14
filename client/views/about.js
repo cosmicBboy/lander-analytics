@@ -1,12 +1,19 @@
 Meteor.subscribe('about');
 
 Template.onRendered(function() {
-  console.log(this.data);
+  // console.log(this.data);
 });
 
 Template.about.helpers({
-  showOverlay : function() {
-    return Session.get('overlayTemplate');
+  showOverlay : function(arg) {
+    var clickedName = Session.get('leaderName'),
+      checkName = arg.hash.leaderName;
+
+    if (clickedName === checkName) {
+      return true;
+    } else {
+      return false;
+    }
   },
   title: function() {
     var data = Template.currentData();
@@ -30,7 +37,12 @@ Template.about.helpers({
 
 Template.about.events({
   'click a img' : function(e,t) {
+    var leader = $(e.target).parent('a').siblings('.caption').find('h3').text();
+    console.log('SETTING LEADER', leader);
+    // console.log(t.find('.caption h3'));
+    // console.log(t.$('.caption h3'));
     Session.set('overlayTemplate', 'leaderBio');
+    Session.set('leaderName', leader);
   }
   // 'click #leader-jared' : function (e,t) {
   //   Session.set('overlayTemplate', 'jaredBio');
@@ -48,15 +60,15 @@ Template.about.events({
 
 Template.leaderBio.helpers({
   name: function() {
-    console.log("LEADER NAME", Template.parentData(0));
+    // console.log("LEADER NAME", Template.parentData(0));
     return Template.parentData(0).name;
   },
   title: function() {
-    console.log("LEADER TITLE", Template.parentData(0));
+    // console.log("LEADER TITLE", Template.parentData(0));
     return Template.parentData(0).positionTitle;
   },
   bio: function() {
-    console.log("LEADER CONTENT", Template.parentData(0));
+    // console.log("LEADER CONTENT", Template.parentData(0));
     return Template.parentData(0).bio;
   }
 })
