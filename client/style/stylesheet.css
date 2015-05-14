@@ -238,6 +238,10 @@ div.train-btn {
   background-color: #F6F6F6;
   border-color: transparent;
   text-align: left;
+
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.2);
+  -moz-box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.2);
 }
 
 .services .panel.panel-default .panel-body {
@@ -261,6 +265,10 @@ div.train-btn {
   background-color: #fff;
   border-color: transparent;
   height: 150px;
+  
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.2);
+  -moz-box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.2);
 }
 
 .services .thumbnail .caption {
@@ -276,6 +284,10 @@ div.train-btn {
 .services.home-services.row {
   width: 100%;
   max-width: 100%;
+}
+
+.services.home-services.row.odd-row {
+  width: 80%;
 }
 
 .services .panel h3 {
@@ -413,4 +425,67 @@ body.noscroll
 .books h4,
 .books p {
   text-align: left;
+}
+
+@media screen 
+and (min-width : 0px) 
+and (max-width : 480px) {
+  .services.home-services.row.odd-row {
+    width: 100%;
+  }
+}
+
+@media screen 
+and (min-width : 480px) 
+and (max-width : 768px) {
+  .services.home-services.row.odd-row {
+    width: 100%;
+  }
+}
+
+@media screen 
+and (min-width : 768px) 
+and (max-width : 991px) {
+  .services.home-services.row.odd-row {
+    width: 100%;
+  }
+}
+
+/*collapse the navbar before default bootstrap breakpoint*/
+@media (max-width: 950px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
 }
