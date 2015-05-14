@@ -6,25 +6,46 @@
         <p>From theoretical statistics and machine learning to applied programming skills, our most popular courses can be modified to fit your organization’s needs.</p>
       </div>
 
-      <div class="services row home-services">
-        <div class="panel-group" id="accordion">
-        {{#each trainingContent}}
+        <div class="services row home-services">
+        {{#each trainingContentEven}}
 
           <div class="col-sm-6 col-md-3">
             
-            <div class="thumbnail">
-              <!-- <span><i class="fa {{icon}}"></i></span> -->
-              <img src="{{icon}}" alt="{{title}}">
-              <div class="caption">
-                <a href="{{pathFor route='trainingCourses' hash=panelId}}"><h4>{{title}}</h4></a>
-                <!-- <p><a href="#" class="btn btn-info" role="button"><i class="fa fa-info-circle"></i>More Info</a></p> -->
+            <a href="{{pathFor route='trainingCourses' hash=panelId}}">
+              <div class="thumbnail">
+                <!-- <span><i class="fa {{icon}}"></i></span> -->
+                <img src="{{icon}}" alt="{{title}}">
+                <div class="caption">
+                  <h4>{{title}}</h4>
+                  <!-- <p><a href="#" class="btn btn-info" role="button"><i class="fa fa-info-circle"></i>More Info</a></p> -->
+                </div>
               </div>
-            </div>
+            </a>
 
           </div>
         {{/each}}
         </div>
-      </div>
+
+        <div class="services row odd-row home-services">
+        {{#each trainingContentOdd}}
+
+          <div class="col-sm-6 col-md-4">
+            
+            <a href="{{pathFor route='trainingCourses' hash=panelId}}">
+              <div class="thumbnail">
+                <!-- <span><i class="fa {{icon}}"></i></span> -->
+                <img src="{{icon}}" alt="{{title}}">
+                <div class="caption">
+                  <h4>{{title}}</h4>
+                  <!-- <p><a href="#" class="btn btn-info" role="button"><i class="fa fa-info-circle"></i>More Info</a></p> -->
+                </div>
+              </div>
+            </a>
+
+          </div>
+        {{/each}}
+        </div>
+
     <!-- </div> -->
   <!-- </div> -->
 </template>
