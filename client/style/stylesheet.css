@@ -489,3 +489,13 @@ and (max-width : 991px) {
         overflow: hidden!important;
     }
 }
+
+.owl-carousel {
+  margin-top: 200px;
+}
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
