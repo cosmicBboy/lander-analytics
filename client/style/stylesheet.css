@@ -254,7 +254,7 @@ div.train-btn {
 }
 
 .services .thumbnail {
-  background-color: #95d1e3;
+  background-color: #87cce1;
   border-color: transparent;
   height: 150px;
 }
@@ -267,6 +267,7 @@ div.train-btn {
 .services .thumbnail .caption  h4{
   margin: 0;
   font-size: 16px;
+  color: #fff;
 }
 
 .services.home-services.row {
@@ -409,4 +410,14 @@ body.noscroll
 .books h4,
 .books p {
   text-align: left;
+}
+
+.owl-carousel {
+  margin-top: 200px;
+}
+
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
 }
