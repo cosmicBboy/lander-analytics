@@ -22,7 +22,15 @@ mizzao:jquery-ui
 email
 twbs:bootstrap
 fortawesome:fontawesome
+<<<<<<< HEAD
 yogiben:admin@=1.0.9
 ian:accounts-ui-bootstrap-3
 gfk:notifications
 richsilv:owl-carousel
+=======
+yogiben:admin@=1.1.1
+yogiben:autoform-file
+gfk:notifications
+cfs:standard-packages
+cfs:gridfs
+>>>>>>> 30b1f53198eb1d602594cd2ac446fcbabcfa070e
