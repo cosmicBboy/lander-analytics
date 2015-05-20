@@ -262,7 +262,7 @@ div.train-btn {
 }
 
 .services .thumbnail {
-  background-color: #87cce1;
+  background-color: #fff;
   border-color: transparent;
   height: 150px;
   
@@ -279,12 +279,11 @@ div.train-btn {
 .services .thumbnail .caption  h4{
   margin: 0;
   font-size: 16px;
-  color: #fff;
 }
 
 .services.home-services.row {
-  width: 80%;
-  max-width: 80%;
+  width: 100%;
+  max-width: 100%;
 }
 
 .services.home-services.row.odd-row {
@@ -428,17 +427,6 @@ body.noscroll
   text-align: left;
 }
 
-<<<<<<< HEAD
-.owl-carousel {
-  margin-top: 200px;
-}
-
-#owl-demo .item img{
-  display: block;
-  width: 100%;
-  height: auto;
-}
-=======
 @media screen 
 and (min-width : 0px) 
 and (max-width : 480px) {
@@ -500,5 +488,4 @@ and (max-width : 991px) {
     .collapsing {
         overflow: hidden!important;
     }
->>>>>>> 30b1f53198eb1d602594cd2ac446fcbabcfa070e
 }
