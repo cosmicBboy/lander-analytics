@@ -14,6 +14,10 @@ Meteor.publish('data_talent', function() {
 	return DataTalent.find({});
 });
 
+Meteor.publish('books', function() {
+	return Books.find({});
+});
+
 Meteor.publish(null, function() {
   return Images.find();
 });
