@@ -295,6 +295,10 @@ div.train-btn {
   width: 80%;
 }
 
+.data-talent-container .row.personnel.odd-row {
+  width: 52%;
+}
+
 .services .panel h3 {
   font-size: 18px;
   margin-top: 10px;

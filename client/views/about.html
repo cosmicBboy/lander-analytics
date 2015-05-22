@@ -3,9 +3,8 @@
     <div class="content">
       <div class="content-copy">
         <h2>{{title}}</h2>
-        {{#each description}}
-          <p>{{this}}</p>
-        {{/each}}
+        <br>
+        {{{description}}}
       </div>
       <br>
 
@@ -36,7 +35,6 @@
 
 <template name="leaderBio">
   <h3>{{name}}, {{title}}</h3>
-  {{#each bio}}
-    <p>{{this}}</p>
-  {{/each}}
+  <br>
+  {{{bio}}}
 </template>
