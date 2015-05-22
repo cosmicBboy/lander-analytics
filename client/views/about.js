@@ -1,7 +1,7 @@
 Meteor.subscribe('about');
 
 Template.onRendered(function() {
-  // console.log(this.data);
+  console.log(this);
 });
 
 Template.about.helpers({

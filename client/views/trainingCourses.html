@@ -2,8 +2,8 @@
   <div class="training-container container">
     <div class="content">
       <div class="content-copy">
-        <h2>PROFESSIONAL TRAINING COURSES</h2>
-        <p>From theoretical statistics and machine learning to applied programming skills, our most popular courses can be modified to fit your organization’s needs.</p>
+        <h2>{{title}}</h2>
+        {{{description}}}
       </div>
 
       <div class="services row">
@@ -11,19 +11,21 @@
             {{#each trainingContent}}
 
             <div class="panel panel-default">
-              <a data-toggle="collapse" data-parent="#accordion" href="#{{panelId}}">
+              <a data-toggle="collapse" data-parent="#accordion" href="#{{slug}}">
                 <div class="panel-heading">
-                    <img src="{{icon}}" alt="{{title}}">
+                    <a><img class="img-circle" src="{{getIcon iconId=icon}}" alt="{{title}}"></a>
                     <h3>{{title}}</h3>
                 </div>
               </a>
-              <div id="{{panelId}}" class="panel-collapse collapse {{#if currentPanelIsHash}}in{{/if}}">
+              <div id="{{slug}}" class="panel-collapse collapse {{#if currentPanelIsHash}}in{{/if}}">
                   <div class="panel-body">
                     <h3><strong>Description:</strong></h3>
                     <p>{{description}}</p>
                     <br>
                     <h3><strong>Topics Covered:</strong></h3>
-                    {{> Template.dynamic template=trainingTemplate}}
+                    <div class="topic-list">
+                      {{{this.topicList}}}
+                    </div>
                     <br>
                     <p class="">For more information please <a href="{{pathFor route='contact'}}">contact us</a></p>
                   </div>
@@ -33,34 +35,15 @@
           </div>
       </div>
 
-      <!-- <div class="services row">
-        <div class="panel-group" id="accordion">
-        {{#each trainingContent}}
-
-          <div class="panel panel-default">
-              <div class="panel-heading">
-                <img src="{{icon}}" alt="{{title}}">
-                <h3><a data-toggle="collapse" data-parent="#accordion" href="#{{panelId}}">{{title}}</a></h3>
-              </div>
-
-              <div id="{{panelId}}" class="panel-collapse collapse {{#if currentPanelIsHash}}in{{/if}}">
-                <div class="panel-body">
-                  <h3><strong>Description:</strong></h3>
-                  <p>{{description}}</p>
-                  <br>
-                  <h3><strong>Topics Covered:</strong></h3>
-                  {{> Template.dynamic template=trainingTemplate}}
-                  <br>
-                  <p class="">For more information please <a href="{{pathFor route='contact'}}">contact us</a></p>
-                </div>
-              </div>
-          </div>
-
-        {{/each}}
-        </div>
-
-      </div> -->
-
     </div>
   </div>
+</template>
+
+<template name="topic">
+  <li>{{topicHeading}}</li>
+  <ul>
+  {{#each subTopics}}
+    <li>{{this}}</li>
+  {{/each}}
+  </ul>
 </template>

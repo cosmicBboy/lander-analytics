@@ -7,51 +7,47 @@
       </div>
 
       <div class="row personnel">
+      {{#each dataTalentEven}}
         <div class="col-md-4">
           <div class="thumbnail">
-            <a id="team-jared"><img class="img-circle" src="/headshots/jared_250.png" alt="..."></a>
+            <a><img class="img-circle" src="{{getPicture pictureId=picture}}" alt="..."></a>
             <div class="caption">
-              <h4>Jared Lander</h4>
+              <h4>{{name}}</h4>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail">
-            <a id="team-andrew"><img class="img-circle" src="/headshots/andygelman_300.png" alt="..."></a>
-            <div class="caption">
-              <h4>Andrew Gelman</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="thumbnail">
-            <a id="team-daniel"><img class="img-circle" src="/headshots/dan_350" alt="..."></a>
-            <div class="caption">
-              <h4>Daniel Chen</h4>
-            </div>
-          </div>
-        </div>
+
+        {{#if showOverlay talentName=name}}
+          {{> overlay}}
+        {{/if}}
+
+      {{/each}}
       </div>
 
-      <div class="row personnel">
-        <div class="col-md-4 col-md-offset-2">
+      <div class="row personnel odd-row">
+      {{#each dataTalentOdd}}
+        <div class="col-md-{{#if dataTalentOddSingle}}12{{else}}6{{/if}}">
           <div class="thumbnail">
-            <a id="team-bob"><img class="img-circle" src="/headshots/bobcarptender_200.png" alt="..."></a>
+            <a><img class="img-circle" src="{{getPicture pictureId=picture}}" alt="..."></a>
             <div class="caption">
-              <h4>Bob Carpenter</h4>
+              <h4>{{name}}</h4>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail">
-            <a id="team-vivian"><img class="img-circle" src="/headshots/viv_350.png" alt="..."></a>
-            <div class="caption">
-              <h4>Vivian Peng</h4>
-            </div>
-          </div>
-        </div>
+
+        {{#if showOverlay talentName=name}}
+          {{> overlay}}
+        {{/if}}
+
+      {{/each}}
       </div>
 
     </div>
   </div>
+</template>
+
+<template name="talentBio">
+  <h3>{{name}}</h3>
+  <br>
+  {{{bio}}}
 </template>

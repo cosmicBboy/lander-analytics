@@ -2,8 +2,8 @@
   <!-- <div class="training-container services-container container"> -->
     <!-- <div class="services-content"> -->
       <div class="content-copy">
-        <h3>PROFESSIONAL TRAINING COURSES</h3>
-        <p>From theoretical statistics and machine learning to applied programming skills, our most popular courses can be modified to fit your organization’s needs.</p>
+        <h3>{{title}}</h3>
+        {{{description}}}
       </div>
 
         <div class="services row home-services">
@@ -11,7 +11,7 @@
 
           <div class="col-sm-6 col-md-3">
             
-            <a href="{{pathFor route='trainingCourses' hash=panelId}}">
+            <a href="{{pathFor route='trainingCourses' hash=slug}}">
               <div class="thumbnail">
                 <!-- <span><i class="fa {{icon}}"></i></span> -->
                 <img src="{{icon}}" alt="{{title}}">
@@ -31,10 +31,10 @@
 
           <div class="col-sm-6 col-md-4">
             
-            <a href="{{pathFor route='trainingCourses' hash=panelId}}">
+            <a href="{{pathFor route='trainingCourses' hash=slug}}">
               <div class="thumbnail">
                 <!-- <span><i class="fa {{icon}}"></i></span> -->
-                <img src="{{icon}}" alt="{{title}}">
+                <a><img class="img-circle" src="{{getIcon iconId=icon}}" alt="{{title}}"></a>
                 <div class="caption">
                   <h4>{{title}}</h4>
                   <!-- <p><a href="#" class="btn btn-info" role="button"><i class="fa fa-info-circle"></i>More Info</a></p> -->

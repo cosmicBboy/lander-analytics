@@ -34,6 +34,11 @@ a img {
   cursor: pointer;
 }
 
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .admin-layout .nav > li > a {
   display: inline;
 }
@@ -289,6 +294,10 @@ div.train-btn {
 
 .services.home-services.row.odd-row {
   width: 80%;
+}
+
+.data-talent-container .row.personnel.odd-row {
+  width: 52%;
 }
 
 .services .panel h3 {

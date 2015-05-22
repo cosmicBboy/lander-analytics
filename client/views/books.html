@@ -2,38 +2,22 @@
   <div class="books-container container">
     <div class="content">
       <div class="content-copy">
-      <h2>BOOKS</h2>
-      <p>Check out these books written by our <a href="{{pathFor route='dataTalent'}}">Data Talent</a></p>
+      <h2>{{title}}</h2>
+      <p>{{description}}</p>
       </div>
 
       <div class="row personnel books">
+      {{#each books}}
         <div class="col-md-4">
           <div class="thumbnail">
-            <a href="http://www.amazon.com/Everyone-Advanced-Analytics-Graphics-Addison-Wesley/dp/0321888030" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51Jib4uNx3L.jpg" alt="..."></a>
+            <a href="{{urlLink}}" target="_blank"><img src="{{getPicture pictureId=picture}}" alt="..."></a>
             <div class="caption">
-              <h4>R for Everyone</h4>
-              <p>by Jared Lander</p>
+              <h4>{{name}}</h4>
+              <p>{{author}}</p>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail">
-            <a href="http://www.amazon.com/Analysis-Regression-Multilevel-Hierarchical-Models/dp/052168689X/" target="_blank"><img src="http://ecx.images-amazon.com/images/I/519gJUTbWwL.jpg" alt="..."></a>
-            <div class="caption">
-              <h4>Data Analysis Using Regression and Multilevel/Hierarchical Models</h4>
-              <p>by Andrew Gelman</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="thumbnail">
-            <a href="http://www.amazon.com/gp/product/1439840954/" target="_blank"><img src="http://ecx.images-amazon.com/images/I/71mVhcHbwgL.jpg" alt="..."></a>
-            <div class="caption">
-              <h4>Bayesian Data Analysis, Third Edition</h4>
-              <p>by Andrew Gelman</p>
-            </div>
-          </div>
-        </div>
+      {{/each}}
       </div>
 
     </div>

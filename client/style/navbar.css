@@ -23,7 +23,8 @@
 }
 
 .navbar-brand {
-  margin-top: 2px;
+  height: 50px;
+  padding: 7px 20px;
 }
 
 .navbar-brand img {
