@@ -25,8 +25,7 @@ var scrollTo = function(element, offset, targetClass) {
 };
 
 Template.home.onRendered(function() {
-  Session.set('showTraining', true);
-
+  
   $("#owl-demo").owlCarousel({
 
     navigation : true, // Show next and prev buttons
@@ -41,6 +40,32 @@ Template.home.onRendered(function() {
     itemsMobile : false
 
   });
+
+  Session.set('showTraining', true);
+
+  this.autorun(function() {
+    var params = Iron.controller().getParams(),
+      hash = params.hash;
+
+    if (hash === null || hash === "training") {
+      Session.set('showTraining', true);
+    } else if (hash === "consulting") {
+      Session.set('showTraining', false);
+    }
+
+    if (hash) {
+      scrollTo('.services-container', -100);
+
+      if (hash === "training") {
+        $('#training-scroll').focus();
+      } else if (hash === "consulting") {
+        $('#consulting-scroll').focus();
+      }
+
+    } else {
+      scrollTo('.home-container');
+    }
+  });
 })
 
 
@@ -51,18 +76,32 @@ Template.home.helpers({
   showTraining: function() {
     return Session.get('showTraining');
   },
+  autoFocusTraining: function() {
+    var showTraining = Session.get('showTraining');
+    if (showTraining) {
+      return "autofocus";
+    } else {
+      return false;
+    }
+  },
+  autoFocusConsulting: function() {
+    var showTraining = Session.get('showTraining');
+    if (showTraining) {
+      return false;
+    } else {
+      return 'autofocus';
+    }
+  }
 });
 
 Template.home.events({
   'click #training-scroll' : function (e,t) {
-    Session.set('showTraining', true);
     scrollTo('.services-container', -100);
   },
   'click #consulting-scroll' : function (e,t) {
-    Session.set('showTraining', false);
     scrollTo('.services-container', -100);
   },
-  'click .back-to-top' : function (e,t) {
-    scrollTo('.home-container');
-  },
+  // 'click .back-to-top' : function (e,t) {
+  //   scrollTo('.home-container');
+  // },
 });
