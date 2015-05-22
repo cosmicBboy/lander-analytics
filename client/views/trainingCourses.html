@@ -2,8 +2,8 @@
   <div class="training-container container">
     <div class="content">
       <div class="content-copy">
-        <h2>PROFESSIONAL TRAINING COURSES</h2>
-        <p>From theoretical statistics and machine learning to applied programming skills, our most popular courses can be modified to fit your organization’s needs.</p>
+        <h2>{{title}}</h2>
+        {{{description}}}
       </div>
 
       <div class="services row">
@@ -23,11 +23,9 @@
                     <p>{{description}}</p>
                     <br>
                     <h3><strong>Topics Covered:</strong></h3>
-                    <ul class="topic-list">
-                      {{#each this.topicList}}
-                        {{> topic}}
-                      {{/each}}
-                    </ul>
+                    <div class="topic-list">
+                      {{{this.topicList}}}
+                    </div>
                     <br>
                     <p class="">For more information please <a href="{{pathFor route='contact'}}">contact us</a></p>
                   </div>

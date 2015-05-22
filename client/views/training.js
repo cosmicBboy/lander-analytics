@@ -1,11 +1,17 @@
 Template.training.helpers({
+  title: function() {
+    return this.title;
+  },
+  description: function() {
+    return this.content;
+  },
   trainingContent: function() {
     var data = Template.parentData(1);
     return data;
   },
   trainingContentEven: function() {
     var data = Template.parentData(1),
-     content = data.fetch(),
+     content = data.trainingCourses,
      slicer = content.length - (content.length % 4);
 
     console.log(content);
@@ -13,7 +19,7 @@ Template.training.helpers({
   },
   trainingContentOdd: function() {
     var data = Template.parentData(1),
-     content = data.fetch(),
+     content = data.trainingCourses,
      slicer = content.length - (content.length % 4);
     return content.slice(slicer);
   },

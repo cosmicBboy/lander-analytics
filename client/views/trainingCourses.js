@@ -40,15 +40,16 @@ Template.trainingCourses.onCreated(function () {
 
 });
 
-Meteor.subscribe('training');
-
 Template.trainingCourses.helpers({
+  title: function() {
+    return this.title;
+  },
+  description: function() {
+    return this.content;
+  },
   trainingContent: function() {
-    var content = this.fetch();
-    return _.sortBy(content, function(obj) {
-      console.log(obj);
-      return obj.order;
-    });
+    console.log(this);
+    return this.trainingCourses;
   },
   trainingTemplate: function() {
     var slug = this.slug;
