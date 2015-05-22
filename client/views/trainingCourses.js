@@ -40,27 +40,38 @@ Template.trainingCourses.onCreated(function () {
 
 });
 
+Meteor.subscribe('training');
+
 Template.trainingCourses.helpers({
   trainingContent: function() {
-    return this.content;
+    var content = this.fetch();
+    return _.sortBy(content, function(obj) {
+      console.log(obj);
+      return obj.order;
+    });
   },
   trainingTemplate: function() {
-    var panelId = this.panelId;
+    var slug = this.slug;
     var dictionary = Template.parentData(1).dictionary;
-    return dictionary[panelId];
+    return dictionary[slug];
   },
-  panelId: function() {
+  slug: function() {
     //data context is a trainingCourse object
-    return this.panelId;
+    return this.slug;
   },
   currentPanelIsHash: function() {
     var controller = Iron.controller();
     var params = controller.getParams();
-    if (this.panelId === params.hash) {
+    if (this.slug === params.hash) {
       return true;
     } else {
       return false;
     }
+  },
+  getIcon: function(arg) {
+    var id = arg.hash.iconId;
+    console.log(Images.findOne({_id: id}));
+    return Images.findOne({_id: id}).url();
   },
 });
 
@@ -74,10 +85,10 @@ Template.trainingCourses.events({
     var params = controller.getParams();
     // console.log(params.hash);
 
-    if (params.hash === this.panelId) {
+    if (params.hash === this.slug) {
       hash = '';
     } else {
-      hash = '#' + this.panelId;
+      hash = '#' + this.slug;
       Router.go(currentRoute + hash);
 
       // Meteor.setTimeout(function() {
@@ -85,4 +96,16 @@ Template.trainingCourses.events({
       // }, 225);
     }
   },
+});
+
+Template.topic.helpers({
+  topicHeading: function() {
+    var data = Template.parentData(0);
+    console.log(data);
+    return data.topicHeading;
+  },
+  subTopics: function() {
+    var data = Template.parentData(0);
+    return data.subTopics;
+  }
 });
