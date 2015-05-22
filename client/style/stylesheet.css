@@ -158,6 +158,13 @@ a.btn.btn-primary.btn-custom .fa-search {
   color: #fff;
 }
 
+.home-nav .btn.btn-primary.btn-custom:hover,
+.home-nav .btn.btn-primary.btn-custom:focus {
+  /*background-color: #1999cd;*/
+  background-color: transparent;
+  color: #136c8e;
+}
+
 .content p {
   text-align: justify;
 }
@@ -461,7 +468,7 @@ and (max-width : 991px) {
 }
 
 /*collapse the navbar before default bootstrap breakpoint*/
-@media (max-width: 950px) {
+@media (max-width: 1066px) {
     .navbar-header {
         float: none;
     }

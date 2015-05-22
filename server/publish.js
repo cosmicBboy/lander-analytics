@@ -6,6 +6,10 @@ Meteor.publish('training', function() {
 	return Training.find({});
 });
 
+Meteor.publish('consulting', function() {
+	return Consulting.find({});
+});
+
 Meteor.publish('about', function() {
 	return About.find({});
 });

@@ -2,32 +2,19 @@
   <!-- <div class="consulting-container services-container container"> -->
     <!-- <div class="services-content"> -->
       <div class="content-copy">
-        <h3>FULL SERVICE DATA SCIENCE FIRM</h3>
-        <p>Offering specific consulting services to all sized organizations in numerous fields with an emphasis on finance, healthcare, technology, politics, retail, sports, food, real estate, education and marketing.</p>
+        <h3>{{title}}</h3>
+        {{{description}}}
         <br>
         <h4>Areas of Expertise</h4>
         <ul>
-          <li>Data Strategy</li>
-          <li>Visualization</li>
-          <li>High Performance Computing</li>
-          <li>Hadoop</li>
-          <li>R</li>
-          <li>C++</li>
-          <li>Python</li>
-          <li>Multilevel Modelling</li>
-          <li>Time Series Analysis</li>
-          <li>Survey Analysis</li>
-          <li>Machine Learning</li>
-          <li>Regularization and Shrinkage</li>
-          <li>Political Targeting</li>
-          <li>Disaster Analysis</li>
-          <li>Marketing</li>
-          <li>Spatial Analysis and Mapping</li>
+        {{#each expertiseList}}
+          <li>{{this.expertiseLabel}}</li>
+        {{/each}}
         </ul>
 
         <br>
 
-        <p class="center-para">For more information please <a href="{{pathFor route='contact'}}">contact us</a></p>
+        <p class="center-para">For more information please <a id="consulting-to-contact" href="{{pathFor route='contact'}}">contact us</a></p>
       </div>
     <!-- </div> -->
   <!-- </div> -->

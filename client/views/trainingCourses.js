@@ -97,6 +97,9 @@ Template.trainingCourses.events({
       // }, 225);
     }
   },
+  'click #course-to-contact': function(e, t) {
+    Session.set('contactReasonValue', 'training');
+  }
 });
 
 Template.topic.helpers({

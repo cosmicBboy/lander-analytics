@@ -1,17 +1,17 @@
+Meteor.subscribe('training');
+
 Template.training.helpers({
   title: function() {
-    return this.title;
+    console.log(this);
+    console.log(this.training);
+    return this.training.title;
   },
   description: function() {
-    return this.content;
-  },
-  trainingContent: function() {
-    var data = Template.parentData(1);
-    return data;
+    return this.training.content;
   },
   trainingContentEven: function() {
     var data = Template.parentData(1),
-     content = data.trainingCourses,
+     content = data.training.trainingCourses,
      slicer = content.length - (content.length % 4);
 
     console.log(content);
@@ -19,13 +19,16 @@ Template.training.helpers({
   },
   trainingContentOdd: function() {
     var data = Template.parentData(1),
-     content = data.trainingCourses,
+     content = data.training.trainingCourses,
      slicer = content.length - (content.length % 4);
     return content.slice(slicer);
   },
   slug: function() {
     //data context is a trainingCourse object
     return this.slug;
+  },
+  courseTitle: function() {
+    return this.title;
   },
   getIcon: function(arg) {
     var id = arg.hash.iconId;

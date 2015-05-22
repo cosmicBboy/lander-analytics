@@ -8,4 +8,8 @@ Template.navbar.events({
     console.log('SEARCHBOX ACTIVATING');
     Session.set('overlayTemplate', 'searchBox');
   },
+   'click .contact-btn' : function(event, template) {
+    // Session.set('showContact', false);
+    Session.set('contactReasonValue', null);
+  },
 });
