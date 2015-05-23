@@ -27,21 +27,6 @@ var scrollTo = function(element, offset, targetClass) {
 Template.home.onRendered(function() {
   
   $("#owl-demo").owlCarousel({
-<<<<<<< HEAD
- 
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem: true
- 
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
- 
-=======
 
     navigation : true, // Show next and prev buttons
     slideSpeed : 300,
@@ -54,7 +39,6 @@ Template.home.onRendered(function() {
     itemsTablet: false,
     itemsMobile : false
 
->>>>>>> c943b180c3e17065f12069080f8b35cad4c5a9d6
   });
 
   Session.set('showTraining', true);
