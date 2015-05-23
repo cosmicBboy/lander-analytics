@@ -27,9 +27,5 @@ yogiben:autoform-file
 gfk:notifications
 cfs:standard-packages
 cfs:gridfs
-<<<<<<< HEAD
-richsilv:owl-carousel
-=======
 richsilv:owl-carousel
 mpowaga:autoform-summernote
->>>>>>> c943b180c3e17065f12069080f8b35cad4c5a9d6
