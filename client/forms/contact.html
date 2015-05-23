@@ -11,5 +11,23 @@
 </template>
 
 <template name="insertContactForm">
-  {{> quickForm collection="Contacts" id="insertContactForm"}}
+  <!-- {{> quickForm collection="Contacts" id="insertContactForm"}} -->
+
+  {{#autoForm collection="Contacts" id="insertContactForm"}}
+  {{> afQuickField name="name"}}
+  {{> afQuickField name="email"}}
+  {{> afQuickField name="phone"}}
+  {{> afQuickField name="reason" value=reasonValue}}
+
+  {{#if afFieldValueIs name="reason" value="Training"}}
+    {{> afFormGroup name="courses" options=trainingOptions}}
+  {{/if}}
+  {{#if afFieldValueIs name="reason" value="Consulting"}}
+    {{> afFormGroup name="consulting" options=consultingOptions}}
+  {{/if}}
+
+  {{> afQuickField name="subject"}}
+  {{> afQuickField name="message"}}
+  <button type="submit" class="btn btn-primary">Submit</button>
+  {{/autoForm}}
 </template>

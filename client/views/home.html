@@ -19,8 +19,8 @@
 
   <div class='services-container'>
     <div class="btn-group" role="group" aria-label="...">
-      <button type="button" id="training-scroll" class="btn btn-lg btn-primary btn-custom">TRAINING</button>
-      <button type="button" id="consulting-scroll" class="btn btn-lg btn-primary btn-custom">CONSULTING</button>
+      <a href="#training"><button type="button" id="training-scroll" class="btn btn-lg btn-primary btn-custom" {{autofocusTraining}}>TRAINING</button></a>
+      <a href="#consulting"><button type="button" id="consulting-scroll" class="btn btn-lg btn-primary btn-custom">CONSULTING</button></a>
    </div>
     {{#if showTraining}}
       {{> training}}
