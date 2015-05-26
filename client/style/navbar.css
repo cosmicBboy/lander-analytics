@@ -44,6 +44,10 @@ nav.navbar.navbar-default {
   padding-bottom: 10px;
 }
 
+.navbar-header {
+  height: 110px;
+}
+
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   /*background-color: rgba(255,255,255,1);*/
@@ -51,10 +55,15 @@ nav.navbar.navbar-default {
   border-top: transparent;
 }
 
+.navbar-default .navbar-collapse.collapsing {
+  background-color: rgba(255,255,255,1);
+  margin-top: -1px;
+}
+
 .navbar-default .navbar-collapse.in,
 .navbar-default .navbar-form.in {
   background-color: rgba(255,255,255,1);
-  margin-top: 40px;
+  margin-top: -1px;
   border-top: transparent;
 
   -webkit-box-shadow: 0px 8px 22px -2px rgba(0,0,0,0.1);
