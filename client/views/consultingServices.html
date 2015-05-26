@@ -1,0 +1,24 @@
+<template name="consultingServices">
+  <div class="consulting-container container">
+    <div class="content">
+      <div class="content-copy">
+        <h2>{{title}}</h2>
+        {{{description}}}
+      </div>
+
+      <div class="services row">
+        {{#each expertiseList}}
+
+        <div class="col-sm-6 col-md-6">
+          <div class="thumbnail">
+            <h4>{{this.expertiseLabel}}</h4>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+
+      <p class="center-para">For more information please <a id="consulting-to-contact" href="{{pathFor route='contact'}}">contact us</a></p>
+
+    </div>
+  </div>
+</template>

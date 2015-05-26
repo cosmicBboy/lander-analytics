@@ -154,7 +154,7 @@ a.btn.btn-primary.btn-custom .fa-search {
 .btn.btn-primary.btn-custom:hover,
 .btn.btn-primary.btn-custom:focus {
   /*background-color: #1999cd;*/
-  background-color: transparent;
+  background-color: #1999CD;
   color: #fff;
 }
 
@@ -243,6 +243,10 @@ div.train-btn {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.consulting-container .services.row {
+  max-width: 700px;
 }
 
 .services .panel.panel-default {
@@ -359,15 +363,32 @@ div.train-btn {
 }
 
 .content-copy ul {
-  background-color: #fff;
+  background-color: #BDDFEA;
   border-radius: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  width: 275px;
+  padding: 30px 40px;
+  width: 60%;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
+}
+
+.content-copy ul li {
+  list-style: none;
+  border-bottom: 1px solid #72a0a8;
+  padding: 10px 0px;
+}
+
+.content-copy ul li:last-child {
+  border-bottom: none;
+}
+
+.consulting-container .thumbnail {
+  background-color: #B5D9E5;
+  height: 100px;
+}
+
+.consulting-container .thumbnail h4 {
+  line-height: 70px;
 }
 
 .row.personnel {
@@ -505,14 +526,4 @@ and (max-width : 991px) {
     .collapsing {
         overflow: hidden!important;
     }
-}
-
-.owl-carousel {
-  margin-top: 200px;
-}
-
-#owl-demo .item img{
-    display: block;
-    width: 100%;
-    height: auto;
 }

@@ -3,8 +3,8 @@
   "servers": [
     {
       "host": "hostname",
-      "username": "root",
-      "password": "password"
+      "username": "username",
+      "password": "password-needed"
       // or pem file (ssh based authentication)
       //"pem": "~/.ssh/id_rsa"
     }
@@ -27,17 +27,17 @@
   "enableUploadProgressBar": true,
 
   // Application name (No spaces)
-  "appName": "meteor",
+  "appName": "lander-analytics",
 
   // Location of app (local directory)
-  "app": "/path/to/the/app",
+  "app": ".",
 
   // Configure environment
   "env": {
-    "ROOT_URL": "http://myapp.com"
+    "ROOT_URL": "http://localhost"
   },
 
   // Meteor Up checks if the app comes online just after the deployment
   // before mup checks that, it will wait for no. of seconds configured below
-  "deployCheckWaitTime": 15
+  "deployCheckWaitTime": 30
 }
