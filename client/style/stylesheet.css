@@ -278,7 +278,7 @@ div.train-btn {
 }
 
 .services .thumbnail {
-  background-color: #fff;
+  background-color: #97cdda;
   border-color: transparent;
   height: 150px;
   
@@ -293,6 +293,7 @@ div.train-btn {
 }
 
 .services .thumbnail .caption  h4{
+  color: #ffffff;
   margin: 0;
   font-size: 16px;
 }
@@ -525,4 +526,14 @@ and (max-width : 991px) {
     .collapsing {
         overflow: hidden!important;
     }
+}
+
+.owl-carousel {
+  margin-top: 200px;
+}
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
 }
