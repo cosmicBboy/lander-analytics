@@ -281,19 +281,26 @@ div.train-btn {
   background-color: #97cdda;
   border-color: transparent;
   height: 150px;
+  color: #305860;
   
   -webkit-box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.2);
   -moz-box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.2);
   box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.2);
 }
 
+.services .thumbnail:hover {
+  background-color: #7fb5c1;
+  color: #fff;
+}
+
 .services .thumbnail .caption {
   display: block;
+  color: inherit;
   padding: 0;
 }
 
 .services .thumbnail .caption  h4{
-  color: #ffffff;
+  color: inherit;
   margin: 0;
   font-size: 16px;
 }
@@ -382,12 +389,12 @@ div.train-btn {
   border-bottom: none;
 }
 
-.consulting-container .thumbnail {
-  background-color: #B5D9E5;
-  height: 100px;
+.thumbnail.expertise {
+  background-color: #97cdda;
+  height: 80px;
 }
 
-.consulting-container .thumbnail h4 {
+.thumbnail.expertise h4 {
   line-height: 70px;
 }
 

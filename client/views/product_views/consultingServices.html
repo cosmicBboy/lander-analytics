@@ -4,9 +4,17 @@
       <div class="content-copy">
         <h2>{{title}}</h2>
         {{{description}}}
+
+        <br>
+
+        <ul>
+          {{#each expertiseList}}
+          <li>{{this.expertiseLabel}}</li>
+          {{/each}}
+        </ul>
       </div>
 
-      <div class="services row">
+      <!-- <div class="services row">
         {{#each expertiseList}}
 
         <div class="col-sm-6 col-md-6">
@@ -15,7 +23,7 @@
           </div>
         </div>
         {{/each}}
-      </div>
+      </div> -->
 
       <p class="center-para">For more information please <a id="consulting-to-contact" href="{{pathFor route='contact'}}">contact us</a></p>
 
