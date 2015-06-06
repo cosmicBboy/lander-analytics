@@ -1,3 +1,5 @@
+Meteor.subscribe('banner');
+
 var scrollAnimate = function (offset, target) {
   $(target).animate(
     { scrollTop: offset },
@@ -94,7 +96,19 @@ Template.home.helpers({
     } else {
       return 'autofocus';
     }
-  }
+  },
+  banners: function() {
+    console.log(this);
+    return this.banners.banners;
+  },
+  getPicture: function(arg) {
+    var id = arg.hash.pictureId;
+    console.log(Images.findOne({_id: id}));
+    return Images.findOne({_id: id}).url();
+  },
+  // urlLink: function(){
+  //   return this.urlLink;
+  // }
 });
 
 Template.home.events({
