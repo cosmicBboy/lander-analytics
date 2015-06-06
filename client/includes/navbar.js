@@ -12,4 +12,8 @@ Template.navbar.events({
     // Session.set('showContact', false);
     Session.set('contactReasonValue', null);
   },
+  'click .navbar-collapse': function(event, template) {
+    console.log('COLLAPSE NAVBAR');
+    $('.navbar-collapse').collapse('hide');
+  }
 });
