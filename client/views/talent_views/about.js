@@ -72,3 +72,15 @@ Template.leaderBio.helpers({
     return Template.parentData(0).bio;
   }
 })
+
+Template.businessPartners.helpers({
+  partners: function() {
+    var data = Template.currentData();
+    return data.businessPartners;
+  },
+  getPicture: function(arg) {
+    var id = arg.hash.pictureId;
+    console.log(Images.findOne({_id: id}));
+    return Images.findOne({_id: id}).url();
+  }
+})

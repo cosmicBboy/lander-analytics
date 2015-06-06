@@ -48,7 +48,7 @@ a img {
 }
 
 .home-container.container {
-  min-height: 70%;
+  min-height: 60%;
 }
 
 .container {
@@ -98,11 +98,13 @@ img.header-gif {
   top: 0%;
   left: 0%;
   z-index: 100;
+  overflow-y: scroll;
 }
 
 .my-overlay .modal {
   border-radius: 4px;
-  margin-top: 11%;
+  margin-top: 12%;
+  margin-bottom: 12%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -115,7 +117,7 @@ img.header-gif {
 }
 
 .my-overlay .modal-copy {
-  overflow-y: scroll;
+  overflow: hidden;
   height: 100%;
 }
 
@@ -247,6 +249,18 @@ div.train-btn {
 
 .consulting-container .services.row {
   max-width: 700px;
+}
+
+.business-partners-container {
+  background-color: #eee;
+}
+
+.business-partners-container h2 {
+  margin: 50px 0;
+}
+
+.business-partners-container .thumbnail {
+  background-color: transparent;
 }
 
 .services .panel.panel-default {
@@ -403,6 +417,7 @@ div.train-btn {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 50px;
 }
 
 .personnel .thumbnail {
@@ -460,8 +475,15 @@ body.noscroll
   text-align: left;
 }
 
-.books-container .books img {
+.books img {
   height: 250px;
+  width: 200px;
+}
+
+.books .thumbnail {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .books h4 {
@@ -471,6 +493,14 @@ body.noscroll
 .books h4,
 .books p {
   text-align: left;
+}
+
+#div-divider {
+  border-bottom: 1px solid #888;
+  margin: 10px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 
 @media screen 

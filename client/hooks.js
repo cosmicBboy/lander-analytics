@@ -50,7 +50,7 @@ var updateHookObject = {
           return adminCallback('onUpdate', [Session.get('admin_collection_name', insertDoc, updateDoc, currentDoc)], function(collection) {
 
           	// if insertDoc.currentContent is true, then set the 'currentContent' 
-          	// attribute of all other documents in the collection to false
+          	// attribute of all other documents in the collection to false            
           	if (insertDoc.currentContent === true) {
 	          	var resetCurrentContent = {$set: {currentContent: false}},
 	          		currentDocId = currentDoc._id;
