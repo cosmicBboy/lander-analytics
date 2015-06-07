@@ -37,7 +37,7 @@ Template.about.helpers({
 
 Template.about.events({
   'click a img' : function(e,t) {
-    var leader = $(e.target).parent('a').siblings('.caption').find('h3').text();
+    var leader = $(e.target).parent('a').siblings('.caption').find('h4').text();
     console.log('SETTING LEADER', leader);
     // console.log(t.find('.caption h3'));
     // console.log(t.$('.caption h3'));
