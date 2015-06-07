@@ -29,6 +29,9 @@
 
       </div>
 
+      <!-- <div id="div-divider"></div> -->
+      {{> businessPartners}}
+
     </div>
   </div>
 </template>
@@ -37,4 +40,19 @@
   <h3>{{name}}, {{title}}</h3>
   <br>
   {{{bio}}}
+</template>
+
+<template name="businessPartners">
+  <div class="business-partners-container">
+    <div class="row personnel">
+      <h2>BUSINESS PARTNERS</h2>
+        {{#each partners}}
+          <div class="col-md-6">
+            <div class="thumbnail">
+              <a href="{{urlLink}}" target="_blank"><img src="{{getPicture pictureId=picture}}" alt="{{name}}"></a>
+            </div>
+          </div>
+        {{/each}}
+    </div>
+  </div>
 </template>

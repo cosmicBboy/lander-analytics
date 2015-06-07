@@ -1,3 +1,5 @@
+Meteor.subscribe('books');
+
 Template.books.helpers({
 	title: function() {
 		return this.title;

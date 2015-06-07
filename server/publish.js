@@ -22,6 +22,10 @@ Meteor.publish('books', function() {
 	return Books.find({});
 });
 
+Meteor.publish('banner', function() {
+	return Banner.find({});
+});
+
 Meteor.publish(null, function() {
   return Images.find();
 });

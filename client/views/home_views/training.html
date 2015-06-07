@@ -13,7 +13,7 @@
             
             <a href="{{pathFor route='trainingCourses' hash=slug}}">
               <div class="thumbnail">
-                <img src="{{icon}}" alt="{{courseTitle}}">
+                <a><img class="img-circle" src="{{getIcon iconId=icon}}" alt="{{courseTitle}}"></a>
                 <div class="caption">
                   <h4>{{courseTitle}}</h4>
                 </div>

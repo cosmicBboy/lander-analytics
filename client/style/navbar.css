@@ -14,12 +14,8 @@
 
 .home-nav .navbar-container{
   background-image: none;
-  background-size: none;
+  background-size: 100% 100%;
   background-color: #fff;
-
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
 }
 
 .navbar-brand {

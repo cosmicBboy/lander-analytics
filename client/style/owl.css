@@ -7,3 +7,8 @@
     width: 100%;
     height: auto;
 }
+
+.owl-theme .owl-controls {
+  margin-top: -25px;
+  position: relative;
+}

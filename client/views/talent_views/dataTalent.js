@@ -1,3 +1,5 @@
+Meteor.subscribe('data_talent');
+
 Template.dataTalent.helpers({
   showOverlay : function(arg) {
     var clickedName = Session.get('talentName'),
