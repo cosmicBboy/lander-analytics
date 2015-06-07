@@ -42,6 +42,14 @@ Template.insertContactForm.helpers({
   }
 });
 
+Template.insertContactForm.events({
+  'submit' : function(e, t) {
+    e.preventDefault();
+    console.log('CLICKING SUBMIT');
+    // Notifications.success('Message successfully sent', 'Thank you for contacting us. We\'ll get back to you soon!');
+  },
+})
+
 var contactHooksObject = {
   // after: {
     // Replace `formType` with the form `type` attribute to which this hook applies
@@ -106,12 +114,16 @@ var contactHooksObject = {
 
     Meteor.call('sendEmail', to, from, subject, testText);
 
-    this.done();
+    this.done(null);
     // You must call this.done()!
     //this.done(); // submitted successfully, call onSuccess
     //this.done(new Error('foo')); // failed to submit, call onError with the provided error
     //this.done(null, "foo"); // submitted successfully, call onSuccess with `result` arg set to "foo"
   },
+  onSuccess: function() {
+    Notifications.success('Message successfully sent', 'Thank you for contacting us. We\'ll get back to you soon!');  
+    console.log('CONTACT FORM SUBMITTED');
+  }
 };
 
 AutoForm.addHooks(['insertContactForm'], contactHooksObject);

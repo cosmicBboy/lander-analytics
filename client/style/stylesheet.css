@@ -34,6 +34,13 @@ a img {
   cursor: pointer;
 }
 
+.contact-container ul.notifications {
+  z-index: 1 !important;
+  position: relative;
+  margin: 10px;
+  width: 100%;
+}
+
 .container {
   padding-left: 0;
   padding-right: 0;
@@ -172,7 +179,7 @@ a.btn.btn-primary.btn-custom .fa-search {
 }
 
 .content p {
-  text-align: justify;
+  text-align: left;
 }
 
 .content p.center-para {
