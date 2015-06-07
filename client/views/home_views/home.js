@@ -46,7 +46,7 @@ Template.home.onRendered(function() {
       itemsMobile : false
 
     });
-  }, 200)
+  }, 600)
 
   Session.set('showTraining', true);
 
@@ -108,9 +108,10 @@ Template.home.helpers({
     console.log(Images.findOne({_id: id}));
     return Images.findOne({_id: id}).url();
   },
-  // urlLink: function(){
-  //   return this.urlLink;
-  // }
+  targetBlank: function(){
+    console.log('TARGET BLANK', this.targetBlank);
+    return this.targetBlank;
+  }
 });
 
 Template.home.events({

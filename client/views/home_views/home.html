@@ -5,7 +5,7 @@
   <div id="owl-demo" class="owl-carousel">
 
     {{#each banners}}
-      <a href="{{urlLink}}">
+      <a href="{{urlLink}}" target="{{#if targetBlank}}_blank{{/if}}">
         <div class="item">
           <img src="{{getPicture pictureId=picture}}">
         </div>

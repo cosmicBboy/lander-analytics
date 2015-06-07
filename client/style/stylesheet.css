@@ -90,6 +90,10 @@ img.header-gif {
   padding-bottom: 10px;
 }
 
+.about-container .content-copy {
+  max-width: 800px;
+}
+
 .my-overlay {
   position: fixed;
   width: 100%;
@@ -303,7 +307,7 @@ div.train-btn {
 }
 
 .services .thumbnail:hover {
-  background-color: #7fb5c1;
+  background-color: #00c49e;
   color: #fff;
 }
 
@@ -413,6 +417,12 @@ div.train-btn {
   line-height: 70px;
 }
 
+.about-container .row.personnel {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .row.personnel {
   width: 75%;
   margin-left: auto;
@@ -476,7 +486,7 @@ body.noscroll
 }
 
 .books img {
-  height: 250px;
+  height: 250px !important;
   width: 200px;
 }
 
