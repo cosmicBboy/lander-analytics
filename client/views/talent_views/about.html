@@ -5,29 +5,31 @@
         <h2>{{title}}</h2>
         <br>
         {{{description}}}
-      </div>
-      <br>
 
-      <div class="row personnel">
 
-        {{#each leaders}}
-        <div class="col-md-4">
-          <div class="thumbnail">
-            <a><img class="img-circle" src="{{getPicture pictureId=picture}}" alt="..."></a>
-            <div class="caption">
-              <h3>{{name}}</h3>
-              <p>{{positionTitle}}</p>
+        <div class="row personnel">
+
+          {{#each leaders}}
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <a><img class="img-circle" src="{{getPicture pictureId=picture}}" alt="..."></a>
+              <div class="caption">
+                <h4>{{name}}</h4>
+                <p>{{positionTitle}}</p>
+              </div>
             </div>
           </div>
+
+          {{#if showOverlay leaderName=name}}
+            {{> overlay}}
+          {{/if}}
+
+          {{/each}}
+
         </div>
 
-        {{#if showOverlay leaderName=name}}
-          {{> overlay}}
-        {{/if}}
-
-        {{/each}}
-
       </div>
+      <br>
 
       <!-- <div id="div-divider"></div> -->
       {{> businessPartners}}
