@@ -55,7 +55,7 @@ a img {
 }
 
 .home-container.container {
-  min-height: 60%;
+  min-height: 1%;
 }
 
 .container {
@@ -89,12 +89,15 @@ img.header-gif {
 
 .content-copy {
   padding-top: 25px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
   width: 100%;
   max-width: 650px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 10px;
+
 }
 
 .about-container .content-copy {
@@ -124,7 +127,7 @@ img.header-gif {
   background-color: #fff;
   display: block;
   padding: 40px;
-  text-align: justify;
+  text-align: left;
 }
 
 .my-overlay .modal-copy {

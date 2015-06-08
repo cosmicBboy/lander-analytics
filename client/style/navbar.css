@@ -73,15 +73,30 @@ nav.navbar.navbar-default {
 
 .navbar-default .navbar-toggle {
   border-color: #addfed;
+  background-color: #addfed;
+  margin: 25px;
 }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #addfed;
+  border-color: #087faa;
+  background-color: #1999cd;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #64B0C7;
+  width: 35px;
+  height: 5px;
+  border-radius: 10px;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+  background-color: #fff;  
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 5px;
 }
 
 .home-nav .btn.btn-primary.btn-custom:hover,
