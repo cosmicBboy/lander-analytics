@@ -89,12 +89,15 @@ img.header-gif {
 
 .content-copy {
   padding-top: 25px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
   width: 100%;
   max-width: 650px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 10px;
+
 }
 
 .about-container .content-copy {
