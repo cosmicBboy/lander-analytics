@@ -92,33 +92,22 @@ var contactHooksObject = {
       })
     }
 
-    var testText = name + ' has contacted you ' +
-      'for your ' + reason + ' services:\n\n' +
-      reasonText + '\n' +
-      'This is their message:\n\n' + message + '\n\n' +
-      'You can reach them through:\n' +
-      'Email: ' + email + '\n' +
-      'Phone: ' + phone + '\n'
-
-    var to = 'info@landeranalytics.com';
-    var from = 'info@landeranalytics.com';
+    // var to = 'info@landeranalytics.com';
+    var to = 'niels.bantilan@gmail.com';
+    var from = email;
     var header = '[Lander Analytics Message] ';
     subject = header + subject;
 
     var text = name + ' has contacted you ' +
       'for your ' + reason + ' services:\n\n' +
-      'This is their message:\n\n' + message + '\n\n' +
-      'You can reach them through:\n\n' +
-      'Email - ' + email + '\n' +
-      'Phone - ' + phone + '\n'
+      reasonText + '\n' +
+      'This is their message:\n\n' + message;
 
-    Meteor.call('sendEmail', to, from, subject, testText);
+    console.log(text);
+
+    Meteor.call('sendEmail', to, from, subject, text);
 
     this.done(null);
-    // You must call this.done()!
-    //this.done(); // submitted successfully, call onSuccess
-    //this.done(new Error('foo')); // failed to submit, call onError with the provided error
-    //this.done(null, "foo"); // submitted successfully, call onSuccess with `result` arg set to "foo"
   },
   onSuccess: function() {
     Notifications.success('Message successfully sent', 'Thank you for contacting us. We\'ll get back to you soon!');  

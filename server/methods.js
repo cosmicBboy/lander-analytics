@@ -6,6 +6,8 @@ Meteor.methods({
     // without waiting for the email sending to complete.
     this.unblock();
 
+    console.log(from);
+
     Email.send({
       to: to,
       from: from,
