@@ -46,7 +46,7 @@ Template.home.onRendered(function() {
       itemsMobile : false
 
     });
-  }, 600)
+  }, 300)
 
   Session.set('showTraining', true);
 

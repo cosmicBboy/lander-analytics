@@ -92,8 +92,7 @@ var contactHooksObject = {
       })
     }
 
-    // var to = 'info@landeranalytics.com';
-    var to = 'niels.bantilan@gmail.com';
+    var to = 'info@landeranalytics.com';
     var from = email;
     var header = '[Lander Analytics Message] ';
     subject = header + subject;
