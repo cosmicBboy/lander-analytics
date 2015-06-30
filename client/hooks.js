@@ -1,5 +1,16 @@
 Meteor.subscribe('about');
 
+// an object with keys as collections and values as 
+// the property in the collection schema to be sorted
+var sortDictionary = {
+  "About": "leadership",
+  "DataTalent": "dataTalent",
+  "Books": "books",
+  "Banner": "banners",
+  "Consulting": "expertiseList",
+  "Training": "trainingCourses",
+}
+
 var insertHookObject = {
     onSubmit: function(insertDoc, updateDoc, currentDoc) {
       var hook;
@@ -63,6 +74,20 @@ var updateHookObject = {
 	          		currentCollection.update(selector, resetCurrentContent);
 	          	});	
           	}
+
+            var sortProperty = sortDictionary[collection];
+            console.log(sortProperty);
+            console.log(insertDoc[sortProperty]);
+            console.log(updateDoc['$set'][sortProperty]);
+            console.log(currentDocId);
+            var sortedCourses = _.sortBy(insertDoc[sortProperty], function(obj){
+              return obj.orderNum;
+            });
+            updateDoc['$set'][sortProperty] = sortedCourses;
+            console.log(updateDoc['$set'][sortProperty]);
+            currentCollection.update({_id: currentDocId}, updateDoc);
+            // console.log(currentCollection.findOne({_id: currentDocId}).trainingCourses);
+
             return hook.done(null, collection);
           });
         }
