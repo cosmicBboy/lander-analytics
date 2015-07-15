@@ -2,14 +2,15 @@
   {{> overlay}}
   <div class="home-container container">
 
-  <div id="owl-demo" class="owl-carousel">
+  <div id="owl-demo" class="owl-carousel owl-nav">
 
     {{#each banners}}
-      <a href="{{urlLink}}" target="{{#if targetBlank}}_blank{{/if}}">
         <div class="item">
-          <img src="{{getPicture pictureId=picture}}">
+          <a href="{{urlLink}}" target="{{#if targetBlank}}_blank{{/if}}">
+            <img src="{{getPicture pictureId=picture}}">
+          </a>
         </div>
-      </a>
+      
     {{/each}}
   </div>
     <!-- <div class='services-scroll-container'> -->

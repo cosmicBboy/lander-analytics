@@ -29,14 +29,13 @@ var scrollTo = function(element, offset, targetClass) {
 Template.home.onRendered(function() {
   
   Meteor.setTimeout(function() {
-    $("#owl-demo").owlCarousel({
+    $(".owl-carousel").owlCarousel({
 
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      autoplay: 1000,
-      rewindNav: true,
-      rewindSpeed: 1000,
+      // nav: true, // Show next and prev buttons
+      // navRewind: true,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
 
       // "singleItem:true" is a shortcut for:
       items : 1, 

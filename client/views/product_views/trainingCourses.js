@@ -45,7 +45,7 @@ Template.trainingCourses.helpers({
     return this.title;
   },
   description: function() {
-    return this.content;
+    return this.description;
   },
   trainingContent: function() {
     console.log(this);
@@ -77,7 +77,7 @@ Template.trainingCourses.helpers({
 });
 
 Template.trainingCourses.events({
-  'click .panel-heading a': function(e, t) {
+  'click .panel-heading': function(e, t) {
     console.log("CLICKING ON ACCORDION");
     var hash;
     var currentRoute = Router.current().route.path();

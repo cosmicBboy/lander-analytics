@@ -24,23 +24,71 @@
         {{/each}}
         </div>
 
-        <div class="services row odd-row home-services">
-        {{#each trainingContentOdd}}
+        
 
-          <div class="col-sm-6 col-md-4">
-            
-            <a href="{{pathFor route='trainingCourses' hash=slug}}">
-              <div class="thumbnail">
-                <a><img class="img-circle" src="{{getIcon iconId=icon}}" alt="{{courseTitle}}"></a>
-                <div class="caption">
-                  <h4>{{courseTitle}}</h4>
+          {{#if contentOddIsOne}}
+          <div class="services row odd-row odd-one home-services">
+          {{#each trainingContentOdd}}
+          
+            <div class="col-sm-12 col-md-12">
+              
+              <a href="{{pathFor route='trainingCourses' hash=slug}}">
+                <div class="thumbnail">
+                  <a><img class="img-circle" src="{{getIcon iconId=icon}}" alt="{{courseTitle}}"></a>
+                  <div class="caption">
+                    <h4>{{courseTitle}}</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
 
+            </div>
+          
+          {{/each}}
           </div>
-        {{/each}}
-        </div>
+          {{/if}}
+
+          {{#if contentOddIsTwo}}
+          <div class="services row odd-row odd-two home-services">
+          {{#each trainingContentOdd}}
+          
+            <div class="col-sm-6 col-md-6">
+              
+              <a href="{{pathFor route='trainingCourses' hash=slug}}">
+                <div class="thumbnail">
+                  <a><img class="img-circle" src="{{getIcon iconId=icon}}" alt="{{courseTitle}}"></a>
+                  <div class="caption">
+                    <h4>{{courseTitle}}</h4>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+          
+          {{/each}}
+          </div>
+          {{/if}}
+
+          {{#if contentOddIsThree}}
+          <div class="services row odd-row odd-three home-services">
+          {{#each trainingContentOdd}}
+          
+            <div class="col-sm-6 col-md-4">
+              
+              <a href="{{pathFor route='trainingCourses' hash=slug}}">
+                <div class="thumbnail">
+                  <a><img class="img-circle" src="{{getIcon iconId=icon}}" alt="{{courseTitle}}"></a>
+                  <div class="caption">
+                    <h4>{{courseTitle}}</h4>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+          
+          {{/each}}
+          </div>
+          {{/if}}
+
 
     <!-- </div> -->
   <!-- </div> -->
