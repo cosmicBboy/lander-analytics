@@ -4,7 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
 accounts-base
 accounts-password
 dburles:collection-helpers
@@ -22,7 +21,7 @@ mizzao:jquery-ui
 email
 twbs:bootstrap
 fortawesome:fontawesome
-yogiben:admin@=1.1.1
+yogiben:admin
 yogiben:autoform-file
 gfk:notifications
 cfs:standard-packages
@@ -30,3 +29,16 @@ cfs:gridfs
 richsilv:owl-carousel
 mpowaga:autoform-summernote
 meteorhacks:fast-render
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
