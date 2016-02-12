@@ -100,7 +100,8 @@ var contactHooksObject = {
     var text = name + ' has contacted you ' +
       'for your ' + reason + ' services:\n\n' +
       reasonText + '\n' +
-      'This is their message:\n\n' + message;
+      'This is their message:\n' + message + '\n\n' +
+      'You can reach them at: ' + phone;
 
     console.log(text);
 
@@ -109,7 +110,7 @@ var contactHooksObject = {
     this.done(null);
   },
   onSuccess: function() {
-    Notifications.success('Message successfully sent', 'Thank you for contacting us. We\'ll get back to you soon!');  
+    Notifications.success('Message successfully sent', 'Thank you for contacting us. We\'ll get back to you soon!');
     console.log('CONTACT FORM SUBMITTED');
   }
 };
