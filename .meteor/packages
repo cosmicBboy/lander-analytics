@@ -13,8 +13,6 @@ matteodem:easy-search
 aldeed:autoform
 alanning:roles
 iron:router
-#sanjo:jasmine
-#velocity:html-reporter
 jquery
 jquery-waypoints
 mizzao:jquery-ui
@@ -29,7 +27,6 @@ cfs:gridfs
 richsilv:owl-carousel
 mpowaga:autoform-summernote
 meteorhacks:fast-render
-standard-minifiers
 meteor-base
 mobile-experience
 mongo
@@ -42,4 +39,7 @@ random
 ejson
 spacebars
 check
-ian:accounts-ui-bootstrap-3
+standard-minifier-css
+standard-minifier-js
+shell-server
+pauldowman:dotenv
