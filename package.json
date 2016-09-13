@@ -1,0 +1,26 @@
+{
+  "name": "lander-analytics",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "meteor run",
+    "deploy": "modulus deploy --node-version 4",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cosmicBboy/lander-analytics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cosmicBboy/lander-analytics/issues"
+  },
+  "homepage": "https://github.com/cosmicBboy/lander-analytics#readme",
+  "engines": {
+    "node": "4.4.7"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.7"
+  }
+}
